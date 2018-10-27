@@ -1,7 +1,11 @@
 language: csharp
 mono: latest
+solution: VSMac-CodeCoverage/VSMac-CodeCoverage.sln
 sudo: false
 os: osx
+install:
+  - sudo apt-get install -y gtk-sharp2
+  - nuget restore VSMac-CodeCoverage/VSMac-CodeCoverage.sln
 
 # git:
 #   depth: false
